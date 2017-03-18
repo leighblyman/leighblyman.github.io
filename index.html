@@ -1,0 +1,120 @@
+<html ng-app="empeerialApp" ng-init="code='working';">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Angular -->
+    <script src="http://particle.golucid.co/lib/angular/angular.min.js" type="text/javascript"></script>
+    <script src="http://particle.golucid.co/lib/angular/angular-animate.min.js" type="text/javascript"></script>
+    <script src="http://particle.golucid.co/lib/angular/angular-route.min.js" type="text/javascript"></script>
+    <!-- Prototype Specific -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="app-min.js"></script>
+    <script type="text/javascript" src="js/clickoutside.directive.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=GloriaHallelujah">
+
+</head>
+
+<body  ng-controller="mainCtrl as ctrl">
+<div class="header" style="margin-bottom: 40px;">
+  <img src="images/logo.svg">
+</div>
+<div class="contained" style="padding-top: 90px;">
+		<h1 class="blue">The new standard in scientific research</h1>
+		<p>Our mission is to optimize how research is shared, understood, and applied. Our goal is to accelerate science. We are creating a scientific culture with increased transparency, contentedness, and understanding.</p>
+		<a href='#oldWay' class="button red" style="margin-right: 20px; margin-top: 30px;">Learn more</a>
+		<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top" class="button white">Contact us</a>
+</div>
+<div id="mainImage">
+	<img src="images/background.svg">
+</div>
+<div id="oldWay" class="oldWay">
+	<div class="firstSection">
+		<h1 class="white no-padding">How the current system is broken:</h1>
+	</div>
+	<div class="secondSection">
+		<div class="Grid" style="padding-bottom: 20px;">
+			<div class="Grid-cell" ng-repeat="template in templates">
+				<i class="material-icons md-36">{{template.icon}}</i>
+				<h3 class="white">{{template.name}}</h3>
+				<p class="white small lightGreen">{{template.short}}</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div>
+	<div class="contained centered" style="width: 60%;">
+		<h1 class="blue">Meet Empeerial</h1>
+		<p>An online research tool that helps scientific authors find and publish scientific data, without all the problems. The result? More knowledge for everyone!</p>
+	</div>
+	<div class="meetUs">
+		<div class="uiMockups">
+			<img src="images/ui1.png">
+		</div>
+		<div class="Grid">
+			<div class="Grid-cell-2" ng-repeat="bullet in bullets">
+				<i class="material-icons md-36 color">{{bullet.icon}}</i>
+				<h2 class="dark-blue">{{bullet.name}}</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel mi ut ipsum laoreet consectetur. Cras urna urna</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="flows">
+	<div class="contained centered" style="padding-top: 10px;" ng-init="myVar='clicked'">
+			<a class="toggle" ng-class="myVar" ng-click="myVar='clicked';myVar2='';flow=false" style="margin-right: 0px; margin-top: 30px; border-top-right-radius: 0px; border-bottom-right-radius: 0px;">The old way</a><a class="toggle" ng-class="myVar2" ng-click="myVar2='clicked';myVar='';flow=true" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;" ng-init="flow=false">The new way</a>
+			<img class="flowImage" ng-show="!flow" src="images/oldWayFlow.png" style="width: 100%; height: auto;">
+			<img class="flowImage" ng-show="flow" src="images/newWayFlow.png" style="width: 100%; height: auto;">
+	</div>
+</div>
+
+<div class="healthcare">
+	<div class="contained centered" style="width: 60%;">
+	<h1 class="blue">3 Reasons all healthcare stakeholders will benefit from using Empeerial:</h1>
+	<ul>
+		<li><p>1) Researchers have complete control over when and how they publish research</p></li>
+		<li><p>2) Content is free and open access through a web-based platform optimized for easy user experience</p></li>
+		<li><p>3) Users are efficiently connected to colleagues and content through a social network that integrates content directly uploaded to Empeerial, from the National Library of Health databases, research repositories, and scientific press.</p></li>
+
+	</ul>
+	</div>
+
+</div>
+
+<div class="quotes">
+	<div class="quoteText">
+		<h3>What people are saying</h3>
+		<h1 class="dark-blue">"I knew within minutes of using this tool that it was going to make my next article publication so much easier. I really like the ability to ..."</h1>
+		<p class="fun">Diane Heart</p>
+		<h3 class="blue">Director of Research, NIH</h3>
+	</div>
+	<div class="quoteImage">
+	</div>
+</div>
+
+
+
+<!-- <section class="image-grid">
+  <div ng-repeat="template in templates" class="image__cell is-collapsed" ng-class="{'is-expanded': expanded == true}">
+    <div class="image--basic" >
+      <a href="#expand-jump-1" ng-click="expanded = !expanded;" click-outside="expanded=false;" style="display: block; height: 100px; max-width: 100%; text-decoration: none;">
+        <i class="material-icons md-36">{{template.icon}}</i>
+        <p>{{template.name}}</p>
+      </a>
+      <div class="arrow--up"></div>
+    </div>
+    <div class="image--expand">
+      <a href="#close-jump-1" class="expand__close" ng-click="expanded=false;"></a>
+        <div class="information" style="display: inline-block; padding: 15px 30px; ">
+          <p>{{template.long}}</p>
+        </div>
+    </div>
+  </div>
+</section> -->
+
+</body>
+
+</html>

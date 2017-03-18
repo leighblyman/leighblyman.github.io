@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #637280;
+  font-weight: 100;
+  font-size: 16px;
+  background: white;
+}
+h1 {
+  font-size: 30px;
+  padding: 15px 0;
+  line-height: 1.4;
+}
+h1.blue {
+  color: #4489ff;
+}
+h1.dark-blue {
+  color: #003591;
+}
+h1.white {
+  color: white;
+}
+h1.no-padding {
+  padding: 0px;
+}
+h2 {
+  font-size: 20px;
+  padding-bottom: 20px;
+  line-height: 1.4;
+}
+h2.blue {
+  color: #4489ff;
+}
+h2.dark-blue {
+  color: #003591;
+}
+h2.white {
+  color: white;
+}
+h2.no-padding {
+  padding: 0px;
+}
+h3 {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  padding: 8px 0px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+h3.white {
+  color: white;
+}
+h3.blue {
+  color: #4489ff;
+}
+a {
+  margin: 0;
+}
+a:hover {
+  cursor: pointer;
+}
+p {
+  line-height: 1.6;
+  font-size: 16px;
+  letter-spacing: .1px;
+}
+p.small {
+  font-size: 13px;
+  line-height: 1.6;
+}
+p.lightGreen {
+  color: white;
+  opacity: .7;
+}
+p.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 1.2;
+  font-weight: 400;
+}
+p.fun {
+  font-family: "Gloria Hallelujah";
+  font-size: 25px;
+  color: #4489ff;
+}
+i {
+  padding: 15px 0;
+}
+.material-icons.md-36 {
+  font-size: 30px;
+  color: white;
+  padding-top: 0px;
+}
+.material-icons.md-36.color {
+  color: #4489ff;
+  font-size: 40px;
+}
+li {
+  padding: 10px 0px;
+}
+.button {
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 15px 0;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all .15s ease;
+  color: #637280;
+  font-weight: 300;
+}
+.button:hover {
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+.button.red {
+  background: #EC174F;
+  color: white;
+}
+.button.white {
+  color: #637280;
+}
+.button.blue {
+  background: #4489ff;
+  color: white;
+}
+.toggle {
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 15px 0;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all .15s ease;
+  color: #637280;
+  font-weight: 300;
+  background: white;
+}
+.toggle.clicked {
+  background: #4489ff;
+  color: white;
+}
+.toggle:hover {
+  background: #ddeaff;
+}
+.toggle:hover.clicked {
+  background: #4489ff;
+  color: white;
+}
+.contained {
+  width: 60%;
+  margin-left: 25px;
+}
+@media all and (max-width: 480px) {
+  .contained {
+    width: 90%;
+  }
+}
+.contained.centered {
+  margin: 0 auto;
+  text-align: center;
+  padding: 25px;
+  width: 100%;
+}
+.header {
+  width: 100%;
+  height: 50px;
+  -webkit-box-shadow: 0px 5px 22px -12px rgba(99, 114, 128, 0.45);
+  -moz-box-shadow: 0px 5px 22px -12px rgba(99, 114, 128, 0.45);
+  box-shadow: 0px 5px 22px -12px rgba(99, 114, 128, 0.45);
+  padding-left: 25px;
+  padding-top: 10px;
+  position: fixed;
+  background: #ffffff;
+}
+#mainImage {
+  position: relative;
+  z-index: -1;
+  margin-top: -160px;
+}
+@media all and (max-width: 722px) {
+  #mainImage {
+    margin-top: -50px;
+  }
+}
+@media all and (max-width: 480px) {
+  #mainImage {
+    margin-top: 0;
+  }
+}
+#mainImage img {
+  width: 100%;
+  height: auto;
+}
+.oldWay {
+  display: flex;
+}
+.firstSection {
+  width: 30%;
+  float: left;
+  padding: 35px 30px;
+  background: #81BC4D;
+}
+.secondSection {
+  width: 70%;
+  float: left;
+  background: #81BC4D;
+}
+.Grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Grid-cell {
+  padding: 35px 35px 15px 35px;
+  flex: 1;
+  flex-basis: 33.33%;
+}
+.Grid-cell-2 {
+  padding: 45px 45px 15px 45px;
+  flex: 1;
+  flex-basis: 33.33%;
+}
+@media only screen and (max-width: 768px) {
+  .firstSection {
+    float: none;
+    width: 100%;
+  }
+  .secondSection {
+    width: 100%;
+    float: none;
+  }
+  .oldWay {
+    display: initial;
+  }
+}
+.flows {
+  background: #f0f0f0;
+}
+.flowImage {
+  transition: all linear 0.9s;
+}
+.flowImage.ng-hide {
+  opacity: 0;
+}
+.bulletSection ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.bulletSection li {
+  padding: 35px 35px 15px 35px;
+  flex: 1;
+  flex-basis: 25%;
+}
+.uiMockups {
+  text-align: center;
+}
+.uiMockups img {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+.quotes {
+  display: flex;
+}
+.quoteImage {
+  width: 60%;
+  float: left;
+  background: url(images/person.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+@media all and (max-width: 768px) {
+  .quoteImage {
+    display: none;
+  }
+}
+.quoteText {
+  width: 40%;
+  float: left;
+  padding: 35px;
+  background: #DEDFDF;
+}
+@media all and (max-width: 768px) {
+  .quoteText {
+    float: none;
+    width: 100%;
+  }
+}
+.healthcare {
+  padding: 4s5px 0px;
+}

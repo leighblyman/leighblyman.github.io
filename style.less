@@ -1,0 +1,587 @@
+/////////////////////////////////////////////////
+//CSS RESET
+////////////////////////////////////////////////
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/////////////////////////////////////////////////
+//START VARIABLES
+////////////////////////////////////////////////
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@font-stack: 'Open Sans', sans-serif;
+//
+//brand colors
+// @blue: #4B69E2;
+@blue: #4489ff;
+@dark-blue: darken(@blue, 35%);
+@green: #81BC4D;
+@gray: #f0f0f0;
+@red: #EC174F;
+@text: #637280;
+@padding: 15px;
+@padding-top-bottom: 15px 0;
+@padding-large: 30px;
+@padding-small: 8px 0px;
+
+
+/////////////////////////////////////////////////
+//STYLES
+////////////////////////////////////////////////
+body{
+    font-family: @font-stack;
+    color: @text;
+    font-weight: 100;
+    font-size: 16px;
+    background: white;
+}
+
+h1{
+    font-size: 30px;
+    padding: @padding-top-bottom;
+    line-height: 1.4;
+
+    &.blue{
+        color: @blue;
+    }
+    &.dark-blue{
+        color: @dark-blue;
+    }
+    &.white{
+        color: white;
+    }
+    &.no-padding{
+    	padding: 0px;
+    }
+}
+
+h2{
+    font-size: 20px;
+    padding-bottom: 20px;
+    line-height: 1.4;
+
+    &.blue{
+        color: @blue;
+    }
+    &.dark-blue{
+        color: @dark-blue;
+    }
+    &.white{
+        color: white;
+    }
+    &.no-padding{
+        padding: 0px;
+    }
+}
+
+h3{
+	font-size: 12px;
+	letter-spacing: 1.5px;
+	font-weight: 400;
+    padding: @padding-small;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    &.white{
+    	color:white;
+    }
+
+    &.blue{
+        color:@blue;
+    }
+}
+
+a{
+	margin: 0;
+
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+p{
+    line-height: 1.6;
+    font-size: 16px;
+    letter-spacing: .1px;
+
+    &.small{
+      font-size:13px;
+      line-height:1.6;
+    }
+     &.lightGreen{
+     	color: white;
+     	opacity: .7;
+    }
+    &.uppercase{
+      text-transform: uppercase;
+      letter-spacing: 1.2;
+      font-weight: 400;
+    }
+    &.fun{
+    	font-family: "Gloria Hallelujah";
+        font-size: 25px;
+        color: @blue;
+    }
+
+}
+
+i{
+  padding: @padding-top-bottom;
+}
+
+.material-icons.md-36 { font-size: 30px; color: white; padding-top: 0px;
+
+&.color{
+    color: @blue;
+    font-size: 40px;
+}
+}
+
+li{
+    padding: 10px 0px;
+}
+
+.button{
+    padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: @padding-top-bottom;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08); 
+    transition: all .15s ease;
+    color: @text;
+    font-weight: 300;
+
+    &:hover{
+         box-shadow:0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+        transform: translateY(-1px);
+    }
+
+    &.red{
+        background: @red;
+        color: white;
+    }
+
+    &.white{
+        color: @text;
+    }
+    &.blue{
+      background: @blue;
+      color: white;
+    }
+}
+
+.toggle{
+
+	padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: @padding-top-bottom;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08); 
+    transition: all .15s ease;
+    color: @text;
+    font-weight: 300;
+    background: white;
+
+    &.clicked{
+    	background: @blue;
+    	color:white;
+    }
+
+    &:hover{
+         background: lighten(@blue, 30%);
+
+        &.clicked{
+    	background: @blue;
+    	color:white;
+    	}
+    }
+}
+
+.contained{
+    width: 60%;
+    margin-left:25px;
+    @media all and (max-width: 480px){
+        width: 90%;
+    }
+
+    &.centered{
+    	margin:0 auto;
+    	text-align: center;
+    	padding: 25px;
+    	width: 100%;
+    }
+}
+
+.header{
+    width: 100%;
+    height: 50px;
+    -webkit-box-shadow: 0px 5px 22px -12px rgba(99,114,128,0.45);
+    -moz-box-shadow: 0px 5px 22px -12px rgba(99,114,128,0.45);
+    box-shadow: 0px 5px 22px -12px rgba(99,114,128,0.45);
+    padding-left: 25px;
+    padding-top: 10px;
+    position: fixed;
+    background: #ffffff;
+}
+
+#mainImage{
+    position: relative;
+    z-index: -1;
+    margin-top: -160px;
+        @media all and (max-width: 722px){
+            margin-top: -50px;
+        }
+        @media all and (max-width: 480px){
+            margin-top: 0;
+        }
+    
+    img{
+        width: 100%;
+        height: auto;
+    } 
+}
+
+
+/////////////////////////////////////////////////
+//OLD WAY
+////////////////////////////////////////////////
+
+.oldWay{
+	display: flex;
+}
+
+.firstSection{
+	width: 30%;
+	float: left;
+	padding: 35px 30px;
+	background: @green;
+}
+
+.secondSection{
+	width: 70%;
+	float: left;
+	background: @green;
+}
+
+.Grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Grid-cell {
+  padding: 35px 35px 15px 35px;
+  flex: 1;
+  flex-basis: 33.33%;
+}
+
+.Grid-cell-2 {
+  padding: 45px 45px 15px 45px;
+  flex: 1;
+  flex-basis: 33.33%;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.firstSection{
+		float: none;
+		width: 100%;
+	}
+
+	.secondSection{
+		width: 100%;
+		float: none;
+	}
+	.oldWay{
+		display: initial;
+	}
+
+}
+
+/////////////////////////////////////////////////
+//FLOWS
+////////////////////////////////////////////////
+
+.flows{
+	background: @gray;
+}
+.flowImage {
+  transition: all linear 0.9s;
+}
+.flowImage.ng-hide {
+  opacity: 0;
+}
+
+/////////////////////////////////////////////////
+//MEET US
+////////////////////////////////////////////////
+.meetUs{
+
+}
+
+.bulletSection{
+	ul{
+		  display: -webkit-box;
+		  display: -moz-box;
+		  display: -ms-flexbox;
+		  display: -webkit-flex;
+		  display: flex;
+		  flex-wrap: wrap;
+	}
+	li{
+		 padding: 35px 35px 15px 35px;
+  flex: 1;
+  flex-basis: 25%;
+	}
+}
+
+.uiMockups{
+    text-align: center;
+
+	img{
+		width: 80%;
+		height: auto;
+        margin: 0 auto;
+	}
+}
+
+
+/////////////////////////////////////////////////
+//QUOTES
+////////////////////////////////////////////////
+
+.quotes{
+    display: flex;
+}
+
+.quoteImage{
+    width: 60%;
+    float: left;
+	background: url(images/person.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: right;
+    @media all and (max-width: 768px){
+        display: none;
+    }
+}
+
+.quoteText{
+    width: 40%;
+    float: left; 
+    padding: 35px; 
+    background: #DEDFDF;
+    @media all and (max-width: 768px){
+        float: none;
+        width: 100%;
+    }
+
+}
+
+/////////////////////////////////////////////////
+//HEALTHCARE
+////////////////////////////////////////////////
+
+.healthcare{
+    padding: 4s5px 0px;
+}
+/////////////////////////////////////////////////
+//IMAGE GRID
+////////////////////////////////////////////////
+
+
+// .oldWay{
+
+//   padding-left: 25px;
+// }
+
+// .image-grid {
+//   width: 100%;
+//   max-width: 1310px;
+//   margin: 0 0 auto auto;
+//   overflow: hidden;
+//   /*padding: 10px 5px 0;*/
+
+// }
+
+// .image__cell {
+//   float: left;
+//   position: relative;
+//   text-align: left;
+// }
+
+// .image--basic {
+//     margin: 5px 5px 0 5px;
+//   background: #f0f0f0;
+// }
+
+// .basic__img {
+//   display: block;
+//   max-width: 100%;
+//   height: auto;
+
+// }
+
+// .image__cell.is-collapsed .image--basic {
+//   cursor: pointer;
+// }
+
+// .image__cell.is-expanded .image--expand {
+//   max-height: 500px;
+// }
+
+// .image--expand {
+//   position: relative;
+//   left: -5px;
+//   padding: 0 5px;
+//   box-sizing: content-box;
+//   overflow: hidden;
+//   background: #222;
+//   max-height: 0;
+//   transition: max-height .3s ease-in-out;
+//   text-align: left;
+// }
+
+// .image__cell.is-collapsed .arrow--up {
+//   height: 10px;
+//   width: 100%;
+// }
+
+// .image__cell.is-expanded .arrow--up {
+//   border-bottom: 8px solid #222;
+//   border-left: 8px solid transparent;
+//   border-right: 8px solid transparent;
+//   height: 0;
+//   width: 0;
+//   margin: 2px auto 0;
+// }
+
+// .expand__close {
+//   position: absolute;
+//   top: 10px;
+//   right: 20px;
+//   color: #454545;
+//   font-size: 50px;
+//   line-height: 50px;
+//   text-decoration: none;
+// }
+
+// .expand__close:before {
+//   content: '×';
+// }
+
+// .expand__close:hover {
+//   color: #fff;
+// }
+
+// .image--large {
+//   max-width: 100%;
+//   height: auto;
+//   display: block;
+//   padding: 40px;
+//   margin: 0 auto;
+//   box-sizing: border-box;
+// }
+
+// @media only screen and (max-width: 530px) {
+
+//   .image__cell {
+//       width: 50%;
+//   }
+
+//   .image__cell:nth-of-type(2n+2) .image--expand {
+//       margin-left: -100%;
+//   }
+
+//   .image__cell:nth-of-type(2n+3) {
+//       clear:left;
+//   }
+
+//   .image--expand {
+//       width: 200%;
+//   }
+
+// }
+
+// @media only screen and (min-width: 531px) {
+//   .image__cell {
+//       width: 25%;
+//   }
+  
+//   .image__cell:nth-of-type(4n+2) .image--expand {
+//     margin-left: -100%;
+//   }
+
+//   .image__cell:nth-of-type(4n+3) .image--expand {
+//     margin-left: -200%;
+//   }
+
+//   .image__cell:nth-of-type(4n+4) .image--expand {
+//     margin-left: -300%;
+//   }
+  
+//   .image__cell:nth-of-type(4n+5) {
+//        clear: left;
+//   }
+  
+//   .image--expand {
+//     width: 400%;
+//   }
+  
+// }
+

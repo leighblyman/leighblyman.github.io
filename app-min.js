@@ -8,8 +8,8 @@ angular.module('empeerialApp',
             // Allow same origin resource loads.
             'self',
             // Allow loading from our assets domain.  Notice the difference between * and **.
-            'http://particle.golucid.co/**',
-            'https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-157/**'
+            // 'http://particle.golucid.co/**',
+            // 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-157/**'
         ]);
     }])
     ////////////////
